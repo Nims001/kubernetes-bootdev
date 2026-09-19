@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+spec:
+  selector:
+    app: synergychat-web
+  ports: # we need one array entry using 1 - that specifies protocol, port and targetPort
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+    
